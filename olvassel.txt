@@ -1,0 +1,34 @@
+Készítő: Páli András
+
+http://web.uni-corvinus.hu/~vbii48/
+
+Leírás:
+	Az Ethereum blokklánc fizetőeszköze az ETH, nem hivatalos weboldala.
+	Az oldal célja az Ethereum blokklánc valamennyi szolgáltatásának ismertetése, angol nyelven.
+
+	A beadandó alapvetően nem mobil kijelzőkre lett tervezve, hanem széles eszközökre. Media Query-ben lettek kezelve a különböző kijelző méretekhez a változtatások a reszponzivitás elérése érdekében.
+
+Saját JS-kód:
+	Hely: wallet.html
+	A célja az, hogy ki tudjuk számolni mennyi kerül levonásra tranzakciós költségként
+	és mennyit fog kapni a kedvezményetett, attól függően, hogy melyik pénztárcát választjuk.
+	Illetve az átutalási idő függvényében kerül költség még levonásra.
+
+Nem saját JS-kód forrása:
+	https://nomics.com/assets/eth-ethereum/widget
+	Hely: projects.html 76-77.sor
+
+Egyedi betűtípus:
+	Sans serif: Rubik Light 300.
+	Egész weboldalon érvényes.
+
+Új HTML5 form elemek: aboutus.html; color, date
+
+Legtöbb tartalom és képek forrása:
+	ethereum.org
+	https://defiprime.com/payments#ethereum
+
+Ikonok forrása:
+	https://www.flaticon.com/premium-icon/bank_924879
+	https://www.flaticon.com/premium-icon/private-detective_3092745
+	https://www.flaticon.com/premium-icon/friendship_3220829

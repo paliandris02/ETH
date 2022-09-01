@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ethereum | Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Páli András">
+    <meta name="description" content="Az Ethereum blokklánc fizetőeszköze az ETH, nem hivatalos weboldala.">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/ethereum.ico">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="galleria-1.6.1/dist/galleria.min.js"></script>
+    <script src="galleria-1.6.1/dist/themes/classic/galleria.classic.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#kepek').galleria({
+                width: 500,
+                height: 500
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Projects on the Ethereum blockchain
+        </h1>
+    </header>
+    <nav>
+        <ul class="flex_container">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wallet.html">Pick a wallet</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="aboutus.html">What is Ethereum</a></li>
+        </ul>
+    </nav>
+    <article class="projects_header">
+        <h2>
+            Projects available on the Ethereum blockchain
+        </h2>
+    </article>
+    <article class="projects_content">
+        <section id="kepek">
+            <img src="img/gallery/connext.network.png"
+                alt="Connext enables users to batch many Ethereum transactions into one netted transfer by using signed off-blockchain commitments rather than direct on-blockchain transactions."
+                title="Connext">
+            <img src="img/gallery/httpsmaticnetwork.png"
+                alt="Matic Network is a blockchain scalability platform which provides secure, scalable and instant transactions powered by PoS side chains and an adapted version of Plasma. Interview with Sandeep Nailwal."
+                title="Matic">
+            <img src="img/gallery/omisego.network.png"
+                alt="OmiseGO Plasma architecture enables developers to build a L2 Applications with high throughputs and strong safety guarantees."
+                title="OmiseGO">
+            <img src="img/gallery/poa.network.png"
+                alt="xDai Chain provide users with fast transactions and low gas prices. xDai Stable Chain is Ethereum compatible, so data and assets can be transferred to the Ethereum providing backend safety and opportunities to scale. Interview with"
+                title="xDai Stable Chain">
+            <img src="img/gallery/stablepay.io.png"
+                alt="StablePay enables ERC20 tokens payments converted to DAI and cDAI. StablePay: DeFi native payment system, interview with Doug Molina."
+                title="StablePay">
+            <img src="img/gallery/www.celer.network.png"
+                alt="Celer Network is a layer-2 scaling platform that enables fast and secure off-chain transactions for not only payment transactions, but also generalized off-chain smart contract."
+                title="Celer Network">
+            <img src="img/gallery/www.sablier.finance.png"
+                alt="Sablier is the protocol for real-time finance on Ethereum, that enables continuous, autonomous and trustless payroll. Interview with Paul Berg, inventor of the Sablier protocol."
+                title="Sablier">
+            <img src="img/gallery/zksync.io.png"
+                alt="zkSync is a trustless protocol for scalable low-cost payments on Ethereum, powered by zkRollup technology."
+                title="zkSync">
+        </section>
+        <section class="live_price_chart">
+            <h1>
+               Ethererum Live Price (USD)
+            </h1>
+            <div class="nomics-ticker-widget" data-name="Ethereum" data-base="ETH" data-quote="USD"></div>
+            <script src="https://widget.nomics.com/embed.js"></script>
+        </section>
+    </article>
+
+    <footer>
+        <div>
+            <ul class="footer_ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="wallet.html">Pick a wallet</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="aboutus.html">About Ethereum</a></li>
+            </ul>
+        </div>
+        <div>
+            <video autoplay loop class="animation" muted>
+                <source src="img/ethereum-hero-light-aa1003dec196f40e4af5ad67f9aa3f2a.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div>
+            <p>
+                Made By Páli András
+            </p>
+            <p>
+                2021
+            </p>
+        </div>
+    </footer>
+</body>
+
+</HTML>

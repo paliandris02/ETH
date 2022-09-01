@@ -1,0 +1,209 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ethereum | Pick a wallet</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Páli András">
+    <meta name="description" content="Az Ethereum blokklánc fizetőeszköze az ETH, nem hivatalos weboldala.">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/ethereum.ico">
+    <script>
+        function calculate() {
+            let a = document.getElementById("selected_wallet").selectedIndex;
+            let b = document.getElementById("selected_wallet").options;
+            let fast = 0.0001913;
+            let standard = 0.00005631;
+            if (document.getElementById("send").value <= 0) {
+                document.getElementById("send").value="INVALID";
+            } else {
+                if (b[a].value == "Argent") {
+                    if (document.getElementById("under2m").checked) {
+                        let amount = document.getElementById("send").value;
+                        document.getElementById("receive").value = amount * Number(0.98) - fast;
+                        document.getElementById("fee").value = amount * Number(0.02) + fast;
+                    } else {
+                        let amount = document.getElementById("send").value;
+                        document.getElementById("receive").value = amount * Number(0.98) - standard;
+                        document.getElementById("fee").value = amount * Number(0.02) + standard;
+                    }
+                }
+                if (b[a].value == "Dharma") {
+                    if (document.getElementById("under2m").checked) {
+                        let amount = document.getElementById("send").value;
+                        document.getElementById("receive").value = amount * Number(0.98) - fast;
+                        document.getElementById("fee").value = amount * Number(0.02) + fast;
+                    } else {
+                        let amount = document.getElementById("send").value;
+                        document.getElementById("receive").value = amount * Number(0.98) - standard;
+                        document.getElementById("fee").value = amount * Number(0.02) + standard;
+                    }
+                }
+                if (b[a].value == "Coinbase") {
+                    if (document.getElementById("under2m").checked) {
+                        let amount = document.getElementById("send").value;
+                        document.getElementById("receive").value = amount * Number(0.98) - fast;
+                        document.getElementById("fee").value = amount * Number(0.02) + fast;
+                    } else {
+                        let amount = document.getElementById("send").value;
+                        document.getElementById("receive").value = amount * Number(0.98) - standard;
+                        document.getElementById("fee").value = amount * Number(0.02) + standard;
+                    }
+                }
+                if (b[a].value == "AlphaWallet") {
+                    if (document.getElementById("under2m").checked) {
+                        let amount = document.getElementById("send").value;
+                        document.getElementById("receive").value = amount * Number(0.98) - fast;
+                        document.getElementById("fee").value = amount * Number(0.02) + fast;
+                    } else {
+                        let amount = document.getElementById("send").value;
+                        document.getElementById("receive").value = amount * Number(0.98) - standard;
+                        document.getElementById("fee").value = amount * Number(0.02) + standard;
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Pick a wallet to store ETH
+        </h1>
+    </header>
+    <nav>
+        <ul class="flex_container">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Pick a wallet</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="aboutus.html">What is Ethereum</a></li>
+        </ul>
+    </nav>
+    <article class="main">
+        <section class="wallet_flex_container_title">
+            <h2>Ethereum wallets</h2>
+        </section>
+        <section class="wallet_flex_container">
+            <div class="items">
+                <div class="title">
+                    <img src="img/argent.png" alt="Argent">
+                    <span>Argent</span>
+                </div>
+                <div class="content">
+                    <img src="img/1f4f1.svg" alt="Mobile">
+                    <span>MOBILE</span>
+                    <p>One tap to earn interest & invest; borrow, store and send. Own it.</p>
+                </div>
+                <a class="button" href="https://www.argent.xyz/" target="_blank">Go</a>
+            </div>
+            <div class="items">
+                <div class="title">
+                    <img src="img/dharma.png" alt="Dharma">
+                    <span>Dharma</span>
+                </div>
+                <div class="content">
+                    <img src="img/1f4f1.svg" alt="Mobile">
+                    <span>MOBILE</span>
+                    <p>Dharma is your portal to DeFi. No more seed phrases, no more Chrome extensions.</p>
+                </div>
+                <a class="button" href="https://www.dharma.io/" target="_blank">Go</a>
+            </div>
+            <div class="items">
+                <div class="title">
+                    <img src="img/coinbase.png" alt="Coinbase">
+                    <span>Coinbase</span>
+                </div>
+                <div class="content">
+                    <img src="img/1f4f1.svg" alt="Mobile">
+                    <span>MOBILE</span>
+                    <p>The secure app to store crypto yourself</p>
+                </div>
+                <a class="button" href="https://wallet.coinbase.com/" target="_blank">Go</a>
+            </div>
+            <div class="items">
+                <div class="title">
+                    <img src="img/alpha.png" alt="AlphaWallet">
+                    <span>AlphaWallet</span>
+                </div>
+                <div class="content">
+                    <img src="img/1f4f1.svg" alt="Mobile">
+                    <span>MOBILE</span>
+                    <p>Fully open-source Ethereum wallet that leverages the secure enclave on mobile, offers full
+                        testnet support.</p>
+                </div>
+                <a class="button" href="https://alphawallet.com/" target="_blank">Go</a>
+            </div>
+        </section>
+        <section class="js">
+            <section class="column">
+                <div>
+                    <h2>
+                        Ethereum Transaction Fee Calculator
+                    </h2>
+                </div>
+                <div class="calculator">
+                    <label for="selected_wallet">Choose a wallet</label>
+                    <select class="input_all" id="selected_wallet" size="1" name="selected_wallet">
+                        <option value="Argent">Argent</option>
+                        <option value="Dharma">Dharma</option>
+                        <option value="Coinbase">Coinbase</option>
+                        <option value="AlphaWallet">AlphaWallet</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="send">The amount you have to send</label>
+                    <input class="input_all" type="text" id="send" value="0" name="send">
+                </div>
+                <div>
+                    <label for="receive">The amount the payee will receive</label>
+                    <input class="input_all" type="text" id="receive" value="" name="receive">
+                </div>
+                <div class="radio_input_all">
+                    <label>Choose transfer time <a href="https://legacy.ethgasstation.info/blog/eip-1559/"
+                            target="_blank">Help</a></label>
+                    <input type="radio" name="radio1" id="under2m">
+                    <label class="radio_label" for="under2m">FAST <span class="radio_span">0.00013 ETH
+                            /Transfer</span></label>
+                    <input type="radio" name="radio1" id="under5m" checked>
+                    <label class="radio_label" for="under5m">STANDARD <span class="radio_span">0.000056 ETH
+                            /Transfer</span></label>
+                </div>
+                <div>
+                    <label for="fee">Fees</label>
+                    <input class="input_all" type="text" id="fee" value="" name="fee">
+                </div>
+                <div>
+                    <input class="input_all" type="button" value="Calculate" onclick="calculate()">
+                </div>
+            </section>
+        </section>
+    </article>
+    <footer>
+        <div>
+            <ul class="footer_ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="wallet.html">Pick a wallet</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="aboutus.html">About Ethereum</a></li>
+            </ul>
+        </div>
+        <div>
+            <video autoplay class="animation" loop muted>
+                <source src="img/ethereum-hero-light-aa1003dec196f40e4af5ad67f9aa3f2a.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div>
+            <p>
+                Made By Páli András
+            </p>
+            <p>
+                2021
+            </p>
+        </div>
+    </footer>
+</body>
+
+</HTML>

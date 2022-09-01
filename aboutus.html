@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<HTML lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <title>Ethereum | About Ethereum</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Páli András">
+    <meta name="description" content="Az Ethereum blokklánc fizetőeszköze az ETH, nem hivatalos weboldala.">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/ethereum.ico">
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#urlap").validate({
+                rules: {
+                    firstname: "required",
+                    lastname: "required",
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    birthdate: "required",
+                    age: {
+                        min: 0,
+                        required: true
+                    },
+                    message: "required",
+                },
+                messages: {
+                    firstname: "Firstname is required!",
+                    lastname: "Lastname is required!",
+                    email: "Email is required!",
+                    birthdate: "Birthdate is required!",
+                    age: "Age is required!",
+                    message:"Message is required!",
+                },
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Learn More About Ethereum
+        </h1>
+    </header>
+    <nav>
+        <ul class="flex_container">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="wallet.html">Pick a wallet</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="#">What is Ethereum</a></li>
+        </ul>
+    </nav>
+    <article>
+        <section class="row">
+            <div>
+                <h2>WHAT IS ETHEREUM?</h2>
+                <h3>The foundation for our digital future</h3>
+                <p> Ethereum is open to everyone.</p>
+                <p>All you need is a wallet to take part.</p>
+            </div>
+            <div>
+                <img src="img/what-is-ethereum.png" alt="illustration">
+            </div>
+        </section>
+        <section class="row2">
+            <p>
+                Ethereum is open access to digital money and data-friendly services for everyone – no matter your
+                background or location. It's a community-built technology behind the cryptocurrency ether (ETH) and
+                thousands of applications you can use today.
+            </p>
+        </section>
+        <section class="row3">
+            <div class="bank">
+                <span>Banking for everyone</span><br>
+                Not everyone has access to financial services. But all you need to access Ethereum and its
+                lending, borrowing and savings products is an internet connection.
+            </div>
+            <div class="private">
+                <span>A more private internet</span><br>
+                You don't need to provide all your personal details to use an Ethereum app. Ethereum is
+                building
+                an economy based on value, not surveillance.
+            </div>
+            <div class="friends">
+                <span>A peer-to-peer network</span><br>
+                Ethereum allows you to move money, or make agreements, directly with someone else. You don't
+                need to go through intermediary companies.
+            </div>
+        </section>
+    </article>
+    <article>
+        <form method="POST" id="urlap" action="http://szamtud.uni-corvinus.hu/~blang/receive.php" novalidate>
+            <div class="contact_us">
+                <div class="backgroundClass">
+                    <div>
+                        <h2>Contact Us</h2>
+                    </div>
+                    <div>
+                        <label for="firstname">First name</label>
+                        <input class="input_all" type="text" size="20" name="firstname" id="firstname">
+                    </div>
+                    <div>
+                        <label for="lastname">Last name</label>
+                        <input class="input_all" type="text" size="20" name="lastname" id="lastname">
+                    </div>
+                    <div>
+                        <label for="email">E-mail address</label>
+                        <input class="input_all" type="email" size="20" name="email" id="email">
+                    </div>
+                    <div>
+                        <label for="gender">Gender</label>
+                        <select class="input_all" name="gender" id="gender" size="1">
+                            <option value="male">
+                                Male
+                            </option>
+                            <option value="female">
+                                Female
+                            </option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="birthdate">Birthdate</label>
+                        <input class="input_all" type="date" name="birthdate" id="birthdate">
+                    </div>
+                    <div>
+                        <label for="favcolor">Favourite color </label>
+                        <input class="input_all" type="color" name="favcolor" id="favcolor" value="#FFFFFF">
+                    </div>
+                    <div>
+                        <label for="age">Age</label>
+                        <input class="input_all" type="number" name="age" id="age">
+                    </div>
+                    <div>
+                        <label for="message">Message</label>
+                        <textarea class="input_all" name="message" id="message" rows="7"
+                            placeholder="Write your message here..."></textarea>
+                    </div>
+                    <div>
+                        <input class="mybutton" type="submit" name="submit" value="Submit">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </article>
+    <footer>
+        <div>
+            <ul class="footer_ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="wallet.html">Pick a wallet</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="aboutus.html">About Ethereum</a></li>
+            </ul>
+        </div>
+        <div>
+            <video autoplay class="animation" loop muted>
+                <source src="img/ethereum-hero-light-aa1003dec196f40e4af5ad67f9aa3f2a.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div>
+            <p>
+                Made By Páli András
+            </p>
+            <p>
+                2021
+            </p>
+        </div>
+    </footer>
+</body>
+</HTML>
